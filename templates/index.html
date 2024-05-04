@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titulo%}Technoly Store{% endblock %}
+
+{% block contenido %}
+ <table>
+    {% for producto in productos %}
+    <tr>
+        <td>{{ producto.marca }}</td>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.precio }}</td>
+    </tr>
+    {% endfor %}
+ </table>
+{% endblock %}
