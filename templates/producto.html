@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo%}Technology Store{% endblock %}
+
+{% block contenido %}
+ <table align ="center">
+    <tr><td>
+        <a href = "{{ url_for('inicio')}}"><button>Inicio</button></a>
+    </td></tr>
+    <tr>
+        <td>
+            <img src="{{ url_for('static', filename = 'fotos/') }}{{ producto.id }}.png" width = "256">
+        </td>
+        <td>
+            <h2>{{ producto.categoria }} - {{ producto.marca }}</h2>
+            <h1>{{ producto.nombre }}</h1>
+            <h2>{{ "{:,}".format(producto.precio) }}</h2>
+        </td>
+    </tr>
+ </table>
+{% endblock %}
