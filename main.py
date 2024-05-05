@@ -22,10 +22,18 @@ conexion.close()
 app = Flask(__name__)
 
 #Rutas
+
 @app.route("/")
 def inicio():
     return render_template('index.html', productos = productos)
 
+#Ruta cada producto
+@app.route("/producto/<int:pid>")
+def ruta_producto(pid):
+    for producto in productos:
+        if pid == producto['id']:
+            return render_template('producto.html', producto = producto)
+    return redirect("/")
 #Ejecución del programa
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', debug = True)

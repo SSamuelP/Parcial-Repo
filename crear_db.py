@@ -13,7 +13,7 @@ drop table if exists productos;
 #Creación de la tabla productos
 cursor.execute("""
 create table if not exists productos (
-               Id interger primary key,
+               id interger primary key,
                categoria text not null,
                marca text not null,
                nombre text not null,
