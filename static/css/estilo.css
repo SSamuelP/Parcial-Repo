@@ -6,8 +6,12 @@ html{
 }
 
 table {
-    background-color: #F7C89B;
+    background-color: #012831;
 }
+
+p {
+    color: #FFFF;
+ }
 
 .center {
     display: block;

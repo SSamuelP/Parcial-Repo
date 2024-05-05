@@ -6,9 +6,9 @@
  <table align="center">
     {% for producto in productos %}
     <tr>
-        <td>{{ producto.marca }}</td>
-        <td><a href= "/producto/{{producto.id}}"> {{ producto.nombre }}</a></td>
-        <td style="text-align: right;">{{ "{:,}".format(producto.precio) }}</td>
+        <td style="color: #FFFFFF;">{{ producto.marca }}</td>
+        <td style="color: #FFFFFF;"><a href="/producto/{{producto.id}}"> {{ producto.nombre }}</a></td>
+        <td style="color: #FFFFFF; text-align: right;">{{ "{:,}".format(producto.precio) }}</td>
     </tr>
     {% endfor %}
  </table>

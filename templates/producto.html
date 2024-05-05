@@ -12,9 +12,9 @@
             <img src="{{ url_for('static', filename = 'fotos/') }}{{ producto.id }}.png" width = "256">
         </td>
         <td>
-            <h2>{{ producto.categoria }} - {{ producto.marca }}</h2>
-            <h1>{{ producto.nombre }}</h1>
-            <h2>{{ "{:,}".format(producto.precio) }}</h2>
+            <h2 style = "color: #FFFF;">{{ producto.categoria }} - {{ producto.marca }}</h2>
+            <h1 style = "color: #FFFF;">{{ producto.nombre }}</h1>
+            <h2 style = "color: #FFFF;">{{ "{:,}".format(producto.precio) }}</h2>
         </td>
     </tr>
  </table>
